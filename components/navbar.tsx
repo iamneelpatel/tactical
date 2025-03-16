@@ -60,9 +60,6 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                Get Started
-              </button>
               {mounted && (
                 <button
                   onClick={toggleTheme}
@@ -111,11 +108,6 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-2">
-              <button className="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                Get Started
-              </button>
-            </div>
           </div>
         </div>
       )}
