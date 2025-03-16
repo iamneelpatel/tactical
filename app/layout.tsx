@@ -1,16 +1,16 @@
 import type React from "react"
-import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "TacticalReality Simulations",
-  description: "Advanced AI-powered defense simulation systems",
+  description: "Advanced AI-Powered Defense Simulation Systems",
 }
 
 export default function RootLayout({
@@ -23,8 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
+          {children}
           <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
