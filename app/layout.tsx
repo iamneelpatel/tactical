@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
+import ConfidentialityNotification from "@/components/confidentiality-notification"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <ConfidentialityNotification />
           <Analytics />
         </ThemeProvider>
       </body>
